@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navigation">
+        <div class="container">
+            <div class="navigation-wrapper">
+                <div class="navigation__logo">
+                    <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.539 0c-2.546 0-4.925.748-6.917 2.03l-1.076.774v26.687l1.076.78a12.586 12.586 0 0 0 6.126 2.014c7.417.446 13.574-5.437 13.574-12.762v-6.74C32.322 5.723 26.601 0 19.54 0Zm.7 26.466c3.574-.35 6.27-3.402 6.27-6.992v-6.696a6.979 6.979 0 0 0-6.97-6.97c-3.553 0-6.54 3.536-6.97 6.97l.053 7.617c.458 3.66 3.757 6.448 7.617 6.071Z"
+                            fill="#000"></path>
+                        <path d="M11.519 29.48v1.733H7.428V6.222L5.592 8.058l-4.515 4.516V6.82L6.825 1.07h4.694V29.48Z"
+                            fill="#26CCFF"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.595 2.018V0H6.378L0 6.373v8.795l6.351-6.351v23.472h6.244V2.019ZM11.52 31.213V1.071H6.825L1.077 6.82v5.754l4.515-4.516 1.836-1.836V31.214h4.09Z"
+                            fill="#26CCFF"></path>
+                    </svg>
+                    <svg width="107" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.068 15.025c.102 1.755.63 3.176 1.571 4.252.942 1.077 2.202 1.615 3.779 1.615 1.012 0 1.921-.237 2.729-.721.802-.48 1.33-1.114 1.571-1.916h6.508c-.737 2.46-2.03 4.349-3.886 5.678-1.857 1.33-4.059 1.992-6.61 1.992C4.753 25.925.765 21.587.765 12.91c0-3.709.995-6.664 2.992-8.87C5.754 1.833 8.602.735 12.31.735c7.487 0 11.228 4.758 11.228 14.29H7.068Zm9.973-3.983c-.07-1.781-.586-3.106-1.55-3.961-.963-.856-2.072-1.287-3.332-1.287-1.297 0-2.395.458-3.304 1.367-.91.91-1.438 2.202-1.572 3.881h9.758ZM40.767 9.912c-.177-1.227-.672-2.19-1.496-2.89-.824-.7-1.83-1.05-3.025-1.05-.667 0-1.297.113-1.895.339-.597.226-1.114.614-1.55 1.157-.436.544-.786 1.26-1.05 2.153-.263.894-.392 1.992-.392 3.284 0 2.626.473 4.575 1.42 5.834.948 1.26 2.035 1.895 3.257 1.895 1.227 0 2.277-.34 3.154-1.023.878-.683 1.384-1.674 1.524-2.97h6.362c-.178 1.399-.57 2.674-1.184 3.81a9.989 9.989 0 0 1-2.39 2.944 10.651 10.651 0 0 1-3.364 1.895c-1.26.436-2.61.657-4.048.657-1.647 0-3.138-.275-4.473-.813a9.715 9.715 0 0 1-3.488-2.417c-.99-1.071-1.75-2.411-2.277-4.02-.533-1.61-.796-3.489-.796-5.626 0-2.136.274-3.988.823-5.544.55-1.56 1.308-2.836 2.277-3.837.974-1.001 2.153-1.744 3.542-2.234 1.389-.49 2.922-.737 4.607-.737 3.187 0 5.738.823 7.649 2.47 1.91 1.647 2.971 3.892 3.181 6.728h-6.368v-.005ZM54.407 15.025c.103 1.755.63 3.176 1.572 4.252.942 1.077 2.202 1.615 3.779 1.615 1.012 0 1.921-.237 2.729-.721.802-.48 1.329-1.114 1.571-1.916h6.508c-.738 2.46-2.03 4.349-3.886 5.678-1.857 1.33-4.059 1.992-6.61 1.992-7.977 0-11.965-4.338-11.965-13.015 0-3.709.995-6.664 2.992-8.87C53.094 1.833 55.941.735 59.65.735c7.487 0 11.228 4.758 11.228 14.29h-16.47Zm9.969-3.983c-.07-1.781-.587-3.106-1.55-3.961-.964-.856-2.073-1.287-3.332-1.287-1.297 0-2.395.458-3.305 1.367-.91.91-1.437 2.202-1.572 3.881h9.759ZM78.714 4.874c.808-1.577 1.776-2.66 2.918-3.257C82.767 1.02 84.129.724 85.7.724c1.61 0 2.896.29 3.86.866.963.576 1.9 1.567 2.809 2.966C93.63 2 95.782.724 98.829.724c1.189 0 2.293.21 3.31.63 1.017.42 1.884.99 2.6 1.706a7.702 7.702 0 0 1 1.679 2.546 8.05 8.05 0 0 1 .603 3.1v16.6h-6.19V10.821c0-1.469-.339-2.648-1.023-3.541-.678-.894-1.582-1.34-2.696-1.34-1.152 0-2.115.479-2.88 1.442-.77.964-1.152 2.18-1.152 3.65v14.274h-6.297V10.924c0-1.922-.286-3.208-.862-3.86-.575-.645-1.544-.968-2.906-.968-2.584 0-3.876 1.555-3.876 4.672v14.538h-6.35V1.354h5.92v3.52h.005Z"
+                            fill="#000"></path>
+                    </svg>
+                </div>
+                <div class="navigation__buttons">
+                    <span class="btn2" title="Contact us about partnership">Become Partner</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <h1 class="hero__title">We create seamless web experiences for our clients.</h1>
+                <h6 class="hero__subtitle"><span>Ready</span> to take on your project.</h6>
+                <span class="btn btn--cta">Contact Us</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="container">
+            <h2 class="section-title">Take a look at some of projects we did.</h2>
+            <div class="showcase-wrapper slick-slider">
+                <div class="showcase__item-image">
+                    <img src="showcase-sgo-fab.png" alt="">
+                </div>
+                <div class="showcase__item-text">
+                    <h3 class="showcase__item-text-title">SGOFab</h3>
+                    <div class="showcase__item-flag">
+                        <svg width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h20v15H0V0Z" fill="#066AA7"></path>
+                            <path d="M0 6h20v3H0V6Z" fill="#FECC00"></path>
+                            <path d="M5.5 0h3v15h-3V0Z" fill="#FECC00"></path>
+                        </svg>
+                    </div>
+                    <div class="entry-content">
+                        <ul>
+                            <li>WordPress</li>
+                            <li>Woocommerce</li>
+                            <li>React</li>
+                            <li>Email templates</li>
+                        </ul>
+                        <p>SGOFab, or Stockholm glas och
+                            festighetservice, is Sweedish most
+                            prominent brand of windows and
+                            home glassware. And they have an
+                            excellent web-shop where you can
+                            get all their products.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="btn btn2" title="Find out more">Find out more</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="slick-dots">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="services-wrapper">
+                <h2 class="services__title section-title">Check out our services.</h2>
+                <div class="services__grid">
+                    <div class="services__grid-item">
+                        <div class="services__grid-item-image">
+                            <img src="wordpress-svgrepo-com.svg" alt="">
+                        </div>
+                        <h6 class="services__grid-item-title">
+                            Wordpress development
+                        </h6>
+                        <div class="entry-content">
+                            <p>We can develop just the right, made-to-measure, theme and plugin for you to gain more
+                                success in your online business.</p>
+                        </div>
+                    </div>
+                    <div class="services__grid-item">
+                        <div class="services__grid-item-image">
+                            <img src="woocommerce-logo-svgrepo-com.svg" alt="">
+                        </div>
+                        <h6 class="services__grid-item-title">WooCommerce</h6>
+                        <div class="entry-content">
+                            <p>If you want to open an online store or you already have one but need some modifications
+                                to meet your business needs, you are in the right place.</p>
+                        </div>
+                    </div>
+                    <div class="services__grid-item">
+                        <div class="services__grid-item-image">
+                            <img src="rescue-svgrepo-com.svg" alt="">
+                        </div>
+                        <h6 class="services__grid-item-title">Project Rescue</h6>
+                        <div class="entry-content">
+                            <p>We have revamped lots of broken WordPress projects from devastating stages. If you have a
+                                project in such a state then don’t lose hope – we can fix it.</p>
+                        </div>
+                    </div>
+                    <div class="services__grid-item">
+                        <div class="services__grid-item-image">
+                            <img src="seo-maintenance-svgrepo-com.svg" alt="">
+                        </div>
+                        <h6 class="services__grid-item-title">Website Maintenance</h6>
+                        <div class="entry-content">
+                            <p>Your website needs a constant attention and dedicated support? Our team is capable in
+                                backing-up , maintaining codebase.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrapper">
+                    <span class="btn2">Get a quote</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="roadmap">
+        <div class="container">
+            <div class="roadmap-wrapper">
+                <h2 class="section-title">Take a look at our process.</h2>
+                <div class="process__grid">
+                    <div class="process__grid-item">
+                        <h3 class="process__grid-item-title">
+                            Contact us
+                        </h3>
+                        <span class="process__item-dot"></span>
+                        <div class="process__item-text entry-content">
+                            <p>Your website needs a constant attention and dedicated support? Our team is capable in
+                                backing-up , maintaining codebase.</p>
+                        </div>
+                    </div>
+                    <div class="process__grid-item">
+                        <h3 class="process__grid-item-title">
+                            Schedule a meet
+                        </h3>
+                        <span class="process__item-dot"></span>
+                        <div class="process__item-text entry-content">
+                            <p>At the time of your convinience we’ll schedule a call where we can discuss in details about your ideas.</p>
+                        </div>
+                    </div>
+                    <div class="process__grid-item">
+                        <h3 class="process__grid-item-title">
+                            Analyze and brainstorm
+                        </h3>
+                        <span class="process__item-dot"></span>
+                        <div class="process__item-text entry-content">
+                            <p>Our team of experts will take your request and analyze it in-depth. At this point we will make decisions about overall approach to development.</p>
+                        </div>
+                    </div>
+                    <div class="process__grid-item">
+                        <h3 class="process__grid-item-title">
+                            Development and testing
+                        </h3>
+                        <span class="process__item-dot"></span>
+                        <div class="process__item-text entry-content">
+                            <p>We are the best in business when it comes to WordPress development. Doesn’t matter if it’s custom solution, Gutenberg blocks or page builders, we got you covered.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="logo-grid">
+        <div class="container">
+            <h2 class="section-title">Clients who trusted us their websites</h2>
+            <div class="logo-grid-wrap">
+                <div class="logo-grid__item">
+                    <img src="Coca-Cola_logo.svg" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-bellakliniken.svg" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-victoria-kliniken.svg" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-sgofab.svg" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-virtuelldental.svg" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-autocrashexpert.png" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-crash-finder.png" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-kfz-gutachter.png" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-kfz-gutachter-schmidt.png" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-kitchenstore.svg" alt="">
+                </div> 
+                <div class="logo-grid__item">
+                    <img src="logo-scandinavianexecutive.svg" alt="">
+                </div>
+                <div class="logo-grid__item">
+                    <img src="logo-wmtak.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What others say about us</h2>
+            <div class="testimonials-wrapper slick-slider">
+                <div class="testimonials__item-image">
+                    <img src="https://www.decem.co/wp-content/uploads/2022/02/01.jpg" alt="">
+                </div>
+                <div class="testimonials__item-text">
+                    <h5 class="testimonials__item-text-title">Maik Pramor</h5>
+                    <h6 class="testimonials__item-text-subtitle">CEO and Founder of Pixelcreators</h6>
+                    <div class="entry-content">
+                    <p>We came to Decem few years ago with some simple change requests that needed to be completed&nbsp; urgently, but soon noticed their full range of expertise and knowledge so we decided to give them more complex tasks, and they haven’t stopped impressing us since then! Their team consists of excellent and valuable engineers and managers with top-notch knowledge and great communication skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-form">
+        <div class="container">
+            <h2 class="section-title">
+                Send us a message
+            </h2>
+            <form action="#">
+            <div class="contact-form-wrapper">
+                <div class="contact-form__row">
+                    <div class="contact-form__row-item half">
+                        <label for="fname"></label>
+                        <span class="wpcf7-form-control-wrap">
+                        <input size="40" class="wpcf7-form-control" aria-required="true" aria-invalid="false" placeholder="First Name" value="" type="text" name="firstName">
+                        </span>
+                    </div>
+                    <div class="contact-form__row-item half">
+                        <label for="lname"></label>
+                        <span class="wpcf7-form-control-wrap">
+                            <input size="40" class="wpcf7-form-control" aria-required="true" aria-invalid="false" placeholder="Last Name" value="" type="text" name="lastName">
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-form__row">
+                    <div class="contact-form__row-item">
+                        <span class="wpcf7-form-control-wrap" data-name="emailAddress">
+                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-mail address" value="" type="email" name="emailAddress">
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-form__row">
+                    <div class="contact-form__row-item">
+                        <span class="wpcf7-form-control-wrap" data-name="projectLength">
+                            <select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="projectLength"><option value="">Project length</option><option value="I don't know">I don't know</option><option value="1-3 months">1-3 months</option><option value="3-6 months">3-6 months</option><option value="6+ months">6+ months</option></select>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-form__row">
+                    <div class="contact-form__row-item">
+                    <span class="wpcf7-form-control-wrap" data-name="message">
+                        <textarea cols="40" rows="4" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your message..." name="message"></textarea>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-form__btn">
+                    <input class="wpcf7-form-control has-spinner wpcf7-submit" type="submit" value="Submit">
+                    <span class="wpcf7-spinner"></span>
+                </div>
+            </div>
+            </form>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer-wrapper">
+                <div class="site-footer__content">
+                    <div class="site-footer__content-logo">
+                        <img src="logodecem.svg" alt="Decem Logo">
+                    </div>
+                    <div class="site-footer__content-text entry-content">
+                        <p>For years, we have been developing cost-effective and scalable WordPress solutions for various industries. Your WordPress project will be built with extensibility, stability, scalability, and security in mind, working for your long-term results and increased conversion rates.</p>
+                    </div>
+                </div>
+                <div class="site-footer__info">
+                    <h4 class="site-footer__info-title">Contact Us</h4>
+                    <a href="tel:00381642545992" class="site-footer__info-link">+381 64 2545 992</a>
+                    <a href="mailto:info@decem.co" class="site-footer__info-link">info@decem.co</a>
+                    <span class="site-footer__info-text entry-content">Janka Veselinovića 2, Novi Sad 21000</span>
+                    <div class="site-footer__social">
+                        <a href="https://www.linkedin.com/company/decem.co" class="site-footer__social-link">
+                            <img src="LinkedIn_icon.png" alt="LinkeIn Logo">
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <small class="copyright">
+        © 2023 Copyright Decem. All rights reserved.
+        </small>
+        </div>
+    </footer>
+</body>
+</html>
